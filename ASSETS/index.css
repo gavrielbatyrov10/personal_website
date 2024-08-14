@@ -1,0 +1,446 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+button {
+    cursor: pointer;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    color: white;
+}
+
+p {
+    color: white;
+}
+
+.click {
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.click:hover {
+    transform: scale(1.1);
+}
+
+.click:active {
+    transform: scale(0.8);
+}
+
+/* header  */
+header {
+    background: linear-gradient(to top, rgb(23, 5, 53), rgb(6, 5, 86), rgb(0, 30, 128));
+    padding: 4ch 4ch;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.nav__logo {
+    width: 3rem;
+    border-radius: 50%;
+    filter: invert(1);
+}
+
+.nav__link--list {
+    display: none;
+}
+
+.nav__anchor {
+    color: white;
+}
+
+.menu__bars {
+    width: 2rem;
+    filter: invert(1);
+}
+
+/* main  */
+
+main {
+
+    background-color: rgb(7, 2, 27);
+    display: flex;
+    flex-direction: column;
+    object-fit: contain;
+}
+
+.main__img--wrapper {
+    margin: 0 auto;
+    max-width: 45ch;
+    flex: 1;
+    height: 0%;
+}
+
+.main__img {
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 0 34px #00ccff;
+    box-sizing: unset;
+
+}
+
+.main__header {
+    color: rgb(255, 0, 0);
+    font-size: 2.8rem;
+    padding: 20px 10;
+    margin: 0 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__subheader {
+    color: white;
+    text-align: center;
+
+}
+
+.main__text--wrapper {
+    padding: 1rem;
+    line-height: 1.4;
+}
+
+/* info */
+
+.info {
+    background: linear-gradient(to top, rgb(4, 0, 77), rgb(1, 2, 56), rgb(7, 2, 27));
+    display: flex;
+    flex-direction: column;
+
+    padding-top: 20px;
+    padding-bottom: 80px;
+}
+
+@media(max-width: 380px) {
+    .main__subheader {
+        display: none;
+    }
+
+    .main__projects--btn {
+        margin-bottom: 20px;
+    }
+}
+
+@media(max-width:250px) {
+    .main__img {
+        display: none;
+    }
+
+
+
+    .main__project--text {
+        padding: 12px 0;
+    }
+}
+
+.info__para {
+    padding: 10px;
+    padding-bottom: 30px;
+    object-fit: contain;
+
+}
+
+.text__wrapper {
+    font-size: 1rem;
+    color: white;
+    /* Change the text color to white */
+    text-align: center;
+    border-bottom: 4px solid rgb(1, 1, 88);
+    padding: 18px 4px;
+    margin: 14px;
+    border-top: 4px solid rgb(30, 4, 133);
+    box-shadow: 0 0 34px #6257d8;
+    background-color: rgb(0, 0, 0);
+}
+
+
+
+.main__article--wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.main__project--text {
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    margin: 50px 0;
+
+}
+
+.main__projects--btn {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    border: none;
+    background-color: #0048ff;
+    padding: 6px 30px;
+    border-radius: 3px;
+    margin: 0 auto;
+    font-weight: bold;
+    box-shadow: 0 0 34px #00ccff;
+}
+
+@media(max-width: 190px) {
+    .main__projects--btn {
+        margin-bottom: 20px;
+    }
+
+    .main__project--text {
+        margin-bottom: 12px;
+    }
+
+
+
+}
+
+@media(max-width: 380px) {
+    main {
+        height: 100vh;
+    }
+
+
+}
+
+/* footer  */
+
+footer {
+    background-color: black;
+    padding: 20px 0;
+    z-index: 100;
+    position: relative;
+}
+
+.footer__link-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__link {
+    color: white;
+    font-size: 1.5rem;
+    padding: 1ch;
+}
+
+.footer__link:hover {
+    text-decoration: 1px underline;
+    transition: all 300ms ease-in-out;
+    /* transition: 450ms ease-in-out; */
+    color: red;
+}
+
+
+@media(min-width:768px) {
+    .main__subheader {
+        border: 1px solid white;
+        padding: 1rem;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
+
+@media(min-width:650px) {
+    .text__wrapper {
+        max-width: 700px;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+
+    }
+
+    .info__para {
+        line-height: 2;
+    }
+
+    .menu__bars {
+        display: none;
+    }
+
+    .nav__link--list {
+        display: flex;
+    }
+
+    .nav__anchor {
+        padding: 1ch;
+        font-size: 1.5rem;
+    }
+
+    .nav__anchor:hover {
+        border-bottom: solid red 1px;
+        transition: all 450ms ease-in-out;
+        padding-bottom: 2.5rem;
+    }
+
+}
+
+@media(min-width:850px) {
+
+    .main__header {
+        margin-bottom: 20px;
+    }
+
+    .main__img {
+        margin-top: 40px;
+    }
+}
+
+/* about  */
+
+.about__main {
+    background-color: #242424;
+}
+
+.about__me--wrapper {
+    flex: 1;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.about__title {
+    margin-top: 20px;
+    font-size: 2.5rem;
+}
+
+.about__para {
+    margin-top: 20px;
+    line-height: 2;
+    text-align: center;
+    border: 1px solid white;
+}
+
+.info__img--wrapper {
+    margin: 0 auto;
+    max-width: 65ch;
+    flex: 1;
+    height: 0%;
+}
+
+.info__img {
+    width: 100%;
+    animation: smooth 2s;
+
+}
+
+.Copyright {
+    padding-top: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media(min-width:768px) {
+    .about__para {
+        max-width: 45rem;
+    }
+}
+
+@keyframes smooth {
+    0% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+
+}
+
+@media(max-height:530px) {
+    .info__img {
+        display: none;
+    }
+
+    .info__para {
+        max-width: 25rem;
+        z-index: 0;
+    }
+}
+
+
+
+
+/* Portfolio */
+.t {
+    font: white;
+    filter: invert(1);
+}
+
+.container {
+    max-width: 20rem;
+    margin: 40px;
+    display: flex;
+    margin: 0 auto;
+    width: 5rem;
+    padding-bottom: 40px;
+
+}
+
+.portfolio__subheader {
+    color: rgb(255, 9, 9);
+    text-align: center;
+    margin: 30px 0;
+}
+
+
+.click {
+
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.click:hover {
+    transform: scale(1.1);
+}
+
+.click:active {
+    transform: scale(0.8);
+}
+
+.portfolio__text {
+    text-align: center;
+    padding: 8px;
+    line-height: 1.5;
+    font-size: 1.7rem;
+
+}
+
+@media(min-height:610px) {
+    .t {
+        max-width: 3rem;
+    }
+}
